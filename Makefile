@@ -1,4 +1,4 @@
-install:
+init:
 	@make build
 	@make up
 	docker compose exec app composer install
@@ -38,7 +38,7 @@ ps:
 	docker compose ps
 web:
 	docker compose exec web bash
-app:
+shell:
 	docker compose exec app bash
 tinker:
 	docker compose exec app php artisan tinker
