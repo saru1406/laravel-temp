@@ -43,6 +43,9 @@ RUN <<EOF
   rm -rf /var/lib/apt/lists/*
 EOF
 
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
+
 COPY ./infra/docker/php/php.development.ini /usr/local/etc/php/php.ini
 
 FROM development AS development-xdebug
