@@ -14,7 +14,7 @@ services:
       target: ${APP_BUILD_TARGET:-development}
     volumes:
       - type: bind
-        source: ./src
+        source: .
         target: /workspace
       - type: volume
         source: psysh-store
@@ -43,7 +43,7 @@ services:
         mode: host
     volumes:
       - type: bind
-        source: ./src
+        source: .
         target: /workspace
 
   db:
